@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIRAGE — Desert Luxury</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+    <!-- PRELOADER -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="sun-container">
+                <div class="sun-glow"></div>
+                <div class="sun"></div>
+                <div class="sun-rays">
+                    <div class="ray" style="--r: -60deg; --d: 0.1s"></div>
+                    <div class="ray" style="--r: -30deg; --d: 0.2s"></div>
+                    <div class="ray" style="--r: 0deg; --d: 0.3s"></div>
+                    <div class="ray" style="--r: 30deg; --d: 0.4s"></div>
+                    <div class="ray" style="--r: 60deg; --d: 0.5s"></div>
+                </div>
+            </div>
+            <div class="horizon-line"></div>
+            <div class="preloader-text">سراب</div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <svg viewBox="0 0 40 40" class="logo-mark">
+                    <!-- Calligraphic "Seen" interpretation -->
+                    <path d="M5 20 Q10 25 15 20 T25 20 T35 15 Q30 30 20 28 Q10 26 5 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">سراب</span>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#hero" data-ar="الرئيسية" data-en="HOME">الرئيسية</a>
+                <a href="#inventory" data-ar="السيارات" data-en="VEHICLES">السيارات</a>
+                <a href="#concierge" data-ar="الخبرة" data-en="EXPERIENCE">الخبرة</a>
+                <a href="#testimonials" data-ar="آراء العملاء" data-en="REVIEWS">آراء العملاء</a>
+                <a href="#calculator" data-ar="تواصل" data-en="CONTACT">تواصل</a>
+            </nav>
+            <div class="nav-controls">
+                <div class="theme-toggles">
+                    <button class="theme-btn active" data-theme="dark">☾</button>
+                    <button class="theme-btn" data-theme="light">☀</button>
+                    <button class="theme-btn" data-theme="system">🖥</button>
+                </div>
+                <button id="lang-toggle" class="lang-btn">EN</button>
+                <a href="#calculator" class="btn-outline">تواصل الآن</a>
+                <button class="hamburger" id="mobile-menu-btn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="#hero">الرئيسية</a>
+            <a href="#inventory">السيارات</a>
+            <a href="#concierge">الخبرة</a>
+            <a href="#testimonials">آراء العملاء</a>
+            <a href="#calculator">تواصل</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-pattern"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-cream" data-ar="الفخامة" data-en="LUXURY">الفخامة</span>
+                        <span class="title-gold" data-ar="تبدأ هنا" data-en="STARTS HERE">تبدأ هنا</span>
+                    </h1>
+                    <div class="gold-divider"></div>
+                    <p class="hero-subtext" data-ar="مجموعة من أندر السيارات وأكثرها فخامة، مختارة بعناية لتناسب ذوقك الرفيع." data-en="A collection of the rarest and most luxurious vehicles, carefully selected for your refined taste.">
+                        مجموعة من أندر السيارات وأكثرها فخامة، مختارة بعناية لتناسب ذوقك الرفيع.
+                    </p>
+                    <div class="hero-specs">
+                        <span>٢٠ ماركة</span>
+                        <span class="dot">·</span>
+                        <span>بغداد + البصرة</span>
+                        <span class="dot">·</span>
+                        <span>تقسيط ميسر</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#inventory" class="btn-solid" data-ar="استعرض السيارات" data-en="EXPLORE VEHICLES">استعرض السيارات</a>
+                        <a href="#calculator" class="btn-outline" data-ar="طلب تجربة قيادة" data-en="BOOK TEST DRIVE">طلب تجربة قيادة</a>
+                    </div>
+                </div>
+                <div class="hero-slider-wrap">
+                    <div class="strip-container" id="hero-strip">
+                        <!-- Auto-scrolling strip items injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRANDS MARQUEE -->
+        <section class="brands-section">
+            <h3 class="brands-title" data-ar="الماركات التي نفخر بها" data-en="BRANDS WE ARE PROUD OF">الماركات التي نفخر بها</h3>
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <div class="brand-card">لكزس</div>
+                    <div class="brand-card">BMW</div>
+                    <div class="brand-card">مرسيدس</div>
+                    <div class="brand-card">بنتلي</div>
+                    <div class="brand-card">بورشه</div>
+                    <div class="brand-card">أودي</div>
+                    <div class="brand-card">رولز رويس</div>
+                    <div class="brand-card">لامبورغيني</div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="brand-card">لكزس</div>
+                    <div class="brand-card">BMW</div>
+                    <div class="brand-card">مرسيدس</div>
+                    <div class="brand-card">بنتلي</div>
+                    <div class="brand-card">بورشه</div>
+                    <div class="brand-card">أودي</div>
+                    <div class="brand-card">رولز رويس</div>
+                    <div class="brand-card">لامبورغيني</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INVENTORY (MASONRY) -->
+        <section class="inventory" id="inventory">
+            <div class="container">
+                <div class="inventory-header">
+                    <h2 data-ar="المجموعة الحالية" data-en="CURRENT COLLECTION">المجموعة الحالية</h2>
+                    <div class="filter-pills" id="inventory-filters">
+                        <button class="pill active" data-filter="all" data-ar="الكل" data-en="All">الكل</button>
+                        <button class="pill" data-filter="SUV" data-ar="SUV" data-en="SUV">SUV</button>
+                        <button class="pill" data-filter="سيدان" data-ar="سيدان" data-en="Sedan">سيدان</button>
+                        <button class="pill" data-filter="فاخر" data-ar="فاخر" data-en="Luxury">فاخر</button>
+                        <button class="pill" data-filter="رياضي" data-ar="رياضي" data-en="Sport">رياضي</button>
+                    </div>
+                </div>
+                <div class="masonry-grid" id="masonry-grid">
+                    <!-- Cards injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCIERGE EXPERIENCE -->
+        <section class="concierge" id="concierge">
+            <div class="container concierge-grid">
+                <div class="concierge-text">
+                    <h2 class="concierge-title" data-ar="تجربة الكونسيير — الفخامة في كل خطوة" data-en="CONCIERGE EXPERIENCE — LUXURY AT EVERY STEP">تجربة الكونسيير — الفخامة في كل خطوة</h2>
+                    <div class="service-steps">
+                        <div class="step">
+                            <span class="step-num">01</span>
+                            <h4 data-ar="استشارة شخصية" data-en="Personal Consultation">استشارة شخصية</h4>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">02</span>
+                            <h4 data-ar="اختبار قيادة خاص" data-en="Private Test Drive">اختبار قيادة خاص</h4>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">03</span>
+                            <h4 data-ar="تخصيص السيارة" data-en="Vehicle Customization">تخصيص السيارة</h4>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">04</span>
+                            <h4 data-ar="التسليم بالأبيض" data-en="White Glove Delivery">التسليم بالأبيض</h4>
+                        </div>
+                    </div>
+                    <a href="#calculator" class="btn-solid" style="margin-top:20px;" data-ar="ابدأ تجربتك" data-en="START YOUR EXPERIENCE">ابدأ تجربتك</a>
+                </div>
+                <div class="concierge-image">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Luxury Interior">
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTALLMENT CALCULATOR -->
+        <section class="calculator" id="calculator">
+            <div class="container">
+                <div class="calc-box">
+                    <h2 class="calc-title" data-ar="خطط لامتلاك سيارتك" data-en="PLAN YOUR OWNERSHIP">خطط لامتلاك سيارتك</h2>
+                    
+                    <div class="calc-grid">
+                        <div class="calc-controls">
+                            <div class="control-group">
+                                <label data-ar="سعر السيارة" data-en="Vehicle Price">سعر السيارة (IQD)</label>
+                                <input type="range" id="calc-price" min="25000000" max="400000000" step="5000000" value="150000000">
+                                <span class="val-display" id="val-price">150,000,000 د.ع</span>
+                            </div>
+                            <div class="control-group">
+                                <label data-ar="الدفعة الأولى" data-en="Down Payment">الدفعة الأولى (20%)</label>
+                                <input type="range" id="calc-down" min="0" max="50" step="5" value="20">
+                                <span class="val-display" id="val-down">30,000,000 د.ع</span>
+                            </div>
+                            <div class="control-group">
+                                <label data-ar="المدة" data-en="Duration">المدة (أشهر)</label>
+                                <div class="duration-buttons" id="calc-duration">
+                                    <button class="dur-btn" data-val="12">12</button>
+                                    <button class="dur-btn" data-val="24">24</button>
+                                    <button class="dur-btn active" data-val="36">36</button>
+                                    <button class="dur-btn" data-val="48">48</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-results">
+                            <div class="res-item">
+                                <span class="res-label" data-ar="القسط الشهري:" data-en="Monthly Installment:">القسط الشهري:</span>
+                                <div class="res-value" id="res-monthly">3,333,333 د.ع</div>
+                            </div>
+                            <div class="res-item">
+                                <span class="res-label" data-ar="إجمالي التكلفة:" data-en="Total Cost:">إجمالي التكلفة:</span>
+                                <div class="res-value" id="res-total">150,000,000 د.ع</div>
+                            </div>
+                            <button class="btn-solid whatsapp-cta" id="wa-finance-btn" data-ar="تواصل لتأكيد التمويل" data-en="CONTACT TO CONFIRM FINANCING">تواصل لتأكيد التمويل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SLIDER -->
+        <section class="testimonials" id="testimonials">
+            <div class="container relative">
+                <div class="quote-mark">"</div>
+                <div class="testi-slider" id="testi-slider">
+                    <!-- Slides injected by JS -->
+                </div>
+                <div class="testi-controls">
+                    <button class="nav-arrow" id="testi-prev">←</button>
+                    <div class="testi-dots" id="testi-dots"></div>
+                    <button class="nav-arrow" id="testi-next">→</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-pattern"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <div class="logo-area">
+                        <svg viewBox="0 0 40 40" class="logo-mark">
+                            <path d="M5 20 Q10 25 15 20 T25 20 T35 15 Q30 30 20 28 Q10 26 5 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span class="logo-text">سراب</span>
+                    </div>
+                    <p class="about-text" data-ar="الوجهة الأولى للسيارات الفاخرة في العراق. نقدم تجربة استثنائية لعملائنا المتميزين." data-en="The premier destination for luxury cars in Iraq. We offer an exceptional experience to our discerning clients.">
+                        الوجهة الأولى للسيارات الفاخرة في العراق. نقدم تجربة استثنائية لعملائنا المتميزين.
+                    </p>
+                </div>
+                
+                <div class="footer-col">
+                    <h5 data-ar="سياراتنا" data-en="OUR CARS">سياراتنا</h5>
+                    <ul>
+                        <li><a href="#" data-ar="سوبركار" data-en="Supercars">سوبركار</a></li>
+                        <li><a href="#" data-ar="فاخرة" data-en="Luxury">فاخرة</a></li>
+                        <li><a href="#" data-ar="SUV" data-en="SUV">SUV</a></li>
+                        <li><a href="#" data-ar="كهربائية" data-en="Electric">كهربائية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h5 data-ar="خدماتنا" data-en="OUR SERVICES">خدماتنا</h5>
+                    <ul>
+                        <li><a href="#" data-ar="تجربة قيادة" data-en="Test Drive">تجربة قيادة</a></li>
+                        <li><a href="#" data-ar="برامج التمويل" data-en="Financing">برامج التمويل</a></li>
+                        <li><a href="#" data-ar="صيانة كبار الشخصيات" data-en="VIP Maintenance">صيانة كبار الشخصيات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h5 data-ar="تواصل معنا" data-en="CONTACT US">تواصل معنا</h5>
+                    <div class="location">
+                        <strong>بغداد</strong> – المنصور
+                    </div>
+                    <div class="location">
+                        <strong>البصرة</strong> – شارع الميناء
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.169a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+                        </a>
+                        <a href="#" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 001.914 6.54L.019 24l5.63-1.488A11.94 11.94 0 0011.944 24 12 12 0 0024 12 12 12 0 0011.944 0zm0 22a9.96 9.96 0 01-5.088-1.385l-.364-.216-3.771.99.999-3.676-.237-.376A9.957 9.957 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm5.49-7.51c-.302-.15-1.785-.88-2.062-.98-.277-.1-.478-.15-.68.150-.201.3-.778.98-.953 1.18-.176.2-.352.225-.654.075-1.734-.863-3.033-2.316-3.414-2.966-.088-.151-.013-.23.056-.302.261-.274.524-.654.524-.654s.101-.176 0-.352c-.101-.175-.68-1.642-.931-2.247-.245-.592-.494-.512-.68-.521-.176-.009-.377-.01-.578-.01-.201 0-.527.075-.803.376-.276.3-.1.053-1.053 1.053-1.392 1.954-1.392s1.455 1.765 1.657 2.036c.201.27 2.012 3.25 4.974 4.426.685.27 1.218.432 1.635.553.687.199 1.312.17 1.802.103.55-.075 1.785-.73 2.036-1.435.251-.705.251-1.31.176-1.435-.075-.125-.276-.2-.578-.351z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 سراب MIRAGE. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CAR DETAIL MODAL -->
+    <div class="modal" id="car-modal">
+        <div class="modal-bg"></div>
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-img">
+                    <img id="m-img" src="" alt="Car">
+                </div>
+                <div class="modal-details">
+                    <span id="m-brand" class="m-brand"></span>
+                    <h2 id="m-model" class="m-model"></h2>
+                    <div class="m-tags">
+                        <span id="m-year" class="tag"></span>
+                        <span id="m-cond" class="tag"></span>
+                    </div>
+                    <div id="m-price" class="m-price"></div>
+                    <div class="m-specs">
+                        <div class="spec-item">
+                            <span class="lbl" data-ar="القوة" data-en="Power">القوة</span>
+                            <span id="m-hp" class="val"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="lbl" data-ar="المقاعد" data-en="Seats">المقاعد</span>
+                            <span id="m-seats" class="val"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="lbl" data-ar="المسافة المقطوعة" data-en="Mileage">المسافة</span>
+                            <span id="m-km" class="val"></span>
+                        </div>
+                    </div>
+                    <a href="#" id="m-wa" class="btn-solid whatsapp-btn" target="_blank" data-ar="استفسر عبر واتساب" data-en="Inquire on WhatsApp">استفسر عبر واتساب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
